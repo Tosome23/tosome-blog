@@ -3,6 +3,7 @@ const { DateTime } = require("luxon");
 module.exports = function(eleventyConfig) {
   // static 폴더를 사이트 루트로 복사
   eleventyConfig.addPassthroughCopy({"static/style.css": "style.css"});
+  eleventyConfig.addPassthroughCopy({ "images": "images" });
 
   // 날짜 포맷 필터
   eleventyConfig.addFilter("date", d =>
