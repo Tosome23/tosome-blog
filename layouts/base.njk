@@ -1,32 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>{{ title or "투삼로지스 블로그" }}</title>
-  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="https://tosomelogis.com">투삼로지스</a>
-      <nav class="menu">
-        <a href="/">블로그</a>
-        <a href="https://tosomelogis.com/services">서비스</a>
-        <a class="cta" href="https://tosomelogis.com/contact">문의하기</a>
-      </nav>
-    </div>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/blog/">블로그</a>
+      <a href="/contact/">서비스 문의하기</a>
+    </nav>
   </header>
 
-  <main class="wrap">
+  <main class="site-main">
     {{ content | safe }}
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p>© 투삼로지스</p>
-    </div>
+    <p>© 투삼로지스</p>
   </footer>
 </body>
 </html>
