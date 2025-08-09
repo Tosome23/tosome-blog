@@ -1,9 +1,7 @@
 const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({"static": "/"});
-  return {
-    dir: { input: ".", includes: "layouts", data: "_data", output: "_site" }
+eleventyConfig.addPassthroughCopy("static");
  
   // 날짜 필터 (인자 없이 사용)
   eleventyConfig.addFilter("date", d =>
