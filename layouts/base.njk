@@ -5,17 +5,7 @@
   <title>{{ title or "투삼로지스 블로그" }}</title>
   {% if description %}<meta name="description" content="{{ description }}">{% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {# SEO / OG #}
-  <link rel="canonical" href="{{ page.url | url }}">
-  <meta property="og:title" content="{{ title or '투삼로지스 블로그' }}">
-  <meta property="og:description" content="{{ description or '위험물·배터리 국제특송 전문 블로그' }}">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="{{ page.url | url }}">
-  <meta name="robots" content="index,follow">
-
   <link rel="stylesheet" href="/style.css">
-  <link rel="icon" href="/favicon.ico">
 </head>
 <body>
   <header class="site-header">
@@ -35,7 +25,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© {{ "now" | date | slice(0,4) }} 투삼로지스 · 국제특송/위험물 전문</p>
+      <p>© 투삼로지스</p>
     </div>
   </footer>
 </body>
