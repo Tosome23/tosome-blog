@@ -1,0 +1,10 @@
+---
+layout: base.njk
+---
+<article>
+  <h1>{{ title }}</h1>
+  <p>{{ page.date | date }}</p>
+  {% if description %}<p><em>{{ description }}</em></p>{% endif %}
+  {{ content | safe }}
+  <hr><p><a href="/">← 목록</a></p>
+</article>
