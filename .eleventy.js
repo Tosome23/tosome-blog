@@ -22,5 +22,8 @@ module.exports = function(eleventyConfig) {
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     templateFormats: ["md","njk","html"]
+    eleventyConfig.addPassthroughCopy({"static": "uploads"});
+eleventyConfig.addPassthroughCopy({"static/style.css": "style.css"}); // ★ 추가
+
   };
 };
