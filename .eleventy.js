@@ -14,4 +14,6 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     templateFormats: ["md","njk","html"]
   };
+    eleventyConfig.addCollection("posts", function(collection) {
+  return collection.getFilteredByGlob("content/blog/*.md");
 };
