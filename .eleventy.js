@@ -2,7 +2,7 @@ const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
   // 정적 폴더 전체 통과
-  eleventyConfig.addPassthroughCopy("static");
+  eleventyConfig.addPassthroughCopy({"static": "uploads"});
 
   // 날짜 필터 (인자 없이 사용)
   eleventyConfig.addFilter("date", d =>
