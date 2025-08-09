@@ -1,4 +1,4 @@
-a[build]
+[build]
   command = "npm run build"
   publish = "_site"
 
