@@ -2,15 +2,27 @@
 layout: base.njk
 title: "투삼로지스 블로그"
 permalink: /
+description: "위험물·리튬배터리 국제특송, 포장/통관/서류 실무 가이드"
 ---
 
-<h1>투삼로지스 블로그</h1>
-<ul>
+<h1 class="page-title">투삼로지스 블로그</h1>
+
+<ul class="post-grid">
 {% for post in collections.posts | reverse %}
-  <li>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    <small> · {{ post.date | date }}</small>
-    {% if post.data.description %}<br>{{ post.data.description }}{% endif %}
+  <li class="post-card">
+    <a class="card-link" href="{{ post.url }}">
+      {% if post.data.thumbnail %}
+        <img class="thumb" src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+      {% endif %}
+      <div class="card-body">
+        <h2 class="card-title">{{ post.data.title }}</h2>
+        <p class="card-meta">{{ post.date | date }}</p>
+        {% if post.data.description %}
+          <p class="card-excerpt">{{ post.data.description }}</p>
+        {% endif %}
+        <span class="readmore">자세히 보기 →</span>
+      </div>
+    </a>
   </li>
 {% endfor %}
 </ul>
