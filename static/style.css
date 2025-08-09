@@ -1,50 +1,92 @@
-:root{
-  --bg:#ffffff;
-  --ink:#0f172a;
-  --muted:#6b7280;
-  --brand:#0ea5e9;      /* 하늘계열 */
-  --brand-dark:#0284c7;
-  --card:#f8fafc;
-  --border:#e5e7eb;
+/* 전체 폰트와 색상 기본값 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
 }
-*{box-sizing:border-box}
-body{
-  margin:0; background:var(--bg); color:var(--ink);
-  font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+
+/* 페이지 제목 */
+.page-title {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  padding: 0 1rem;
+  color: #222;
 }
-.wrap{max-width:960px;margin:0 auto;padding:24px}
-.site-header{border-bottom:1px solid var(--border);background:#fff}
-.nav{display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:800;text-decoration:none;color:var(--ink);font-size:20px}
-.menu a{margin-left:16px;text-decoration:none;color:var(--ink)}
-.menu a.cta{padding:8px 12px;border:1px solid var(--brand);border-radius:10px;color:var(--brand)}
-.menu a.cta:hover{background:var(--brand);color:#fff}
-.page-title{font-size:32px;margin:24px 0}
 
-.post-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.post-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
-.card-link{display:block;color:inherit;text-decoration:none}
-.thumb{width:100%;height:160px;object-fit:cover;display:block}
-.card-body{padding:16px}
-.card-title{font-size:18px;margin:0 0 6px}
-.card-meta{color:var(--muted);font-size:13px;margin:0 0 8px}
-.card-excerpt{margin:0 0 10px;color:#334155}
-.readmore{color:var(--brand);font-weight:600}
+/* 블로그 카드 레이아웃 */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0 1rem;
+}
 
-.post-title{font-size:32px;margin:10px 0}
-.post-meta{color:var(--muted);margin:0 0 12px}
-.post-hero{width:100%;height:auto;border-radius:12px;border:1px solid var(--border);margin:8px 0 16px}
-.post-desc{color:#334155;font-style:italic}
+.post-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-.post-content img{max-width:100%;height:auto;border-radius:10px}
-.post-content h2{margin-top:28px;font-size:22px}
-.post-content h3{margin-top:20px;font-size:18px}
-.post-content table{border-collapse:collapse;width:100%;margin:12px 0;border:1px solid var(--border)}
-.post-content th,.post-content td{border:1px solid var(--border);padding:8px}
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
 
-.cta-box{margin:28px 0;padding:18px;border:1px dashed var(--brand);border-radius:14px;background:#f0f9ff}
-.btn{display:inline-block;padding:10px 14px;background:var(--brand);color:#fff;border-radius:10px;text-decoration:none}
-.btn:hover{background:var(--brand-dark)}
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 
-.site-footer{border-top:1px solid var(--border);background:#fff;margin-top:40px}
-.backlink a{color:var(--brand)}
+.thumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+
+.card-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.readmore {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #0076d6;
+  font-weight: 500;
+}
+
+.readmore:hover {
+  text-decoration: underline;
+}
+
+/* 푸터 */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+}
