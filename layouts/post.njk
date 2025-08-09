@@ -6,5 +6,33 @@ layout: base.njk
   <p>{{ page.date | date }}</p>
   {% if description %}<p><em>{{ description }}</em></p>{% endif %}
   {{ content | safe }}
-  <hr><p><a href="/">← 목록</a></p>
+  <hr><p><a href="/">← 목록</a></p>a---
+layout: base.njk
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ title }}</h1>
+    <p class="post-meta">{{ page.date | date }}</p>
+    {% if thumbnail %}
+      <img class="post-hero" src="{{ thumbnail }}" alt="{{ title }}">
+    {% endif %}
+    {% if description %}
+      <p class="post-desc">{{ description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  <aside class="cta-box">
+    <h3>빠르게 안전하게 보내세요</h3>
+    <p>UN 포장 · DGD 서류 대행 · DHL/FedEx 위험물 취급</p>
+    <a class="btn" href="https://tosomelogis.com/contact">지금 상담하기</a>
+  </aside>
+
+  <p class="backlink"><a href="/">← 블로그 목록으로</a></p>
+</article>
+
 </article>
