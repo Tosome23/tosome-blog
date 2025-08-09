@@ -2,7 +2,7 @@ const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
   // static 폴더를 사이트 루트로 복사
-  eleventyConfig.addPassthroughCopy({"static": "/"});
+  eleventyConfig.addPassthroughCopy({"static/style.css": "style.css"});
 
   eleventyConfig.addFilter("date", d =>
     DateTime.fromJSDate(d).toFormat("yyyy-LL-dd")
