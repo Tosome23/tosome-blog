@@ -1,35 +1,35 @@
-/* 전체 폰트와 색상 기본값 */
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  background-color: #f8f9fa;
-  color: #222;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
   margin: 0;
-  padding: 0;
 }
 
-/* 페이지 제목 */
 .page-title {
-  font-size: 2rem;
-  margin: 2rem 0 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 0 1rem;
-  color: #222;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
-/* 블로그 카드 레이아웃 */
 .post-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  list-style: none;
   padding: 0 1rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 .post-card {
+  display: flex;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
 .post-card:hover {
@@ -37,24 +37,22 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
 .thumb {
-  width: 100%;
-  height: 200px;
+  width: 250px;
+  height: 180px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .card-body {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin: 0 0 0.5rem;
 }
@@ -68,25 +66,14 @@ body {
 .card-excerpt {
   font-size: 0.95rem;
   line-height: 1.4;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .readmore {
-  display: inline-block;
-  font-size: 0.9rem;
   color: #0076d6;
+  font-size: 0.9rem;
   font-weight: 500;
 }
-
 .readmore:hover {
   text-decoration: underline;
-}
-
-/* 푸터 */
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #666;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
 }
