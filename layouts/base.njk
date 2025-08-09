@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title or "투삼로지스 블로그" }}</title>
+{% if description %}<meta name="description" content="{{ description }}">{% endif %}
+</head><body>
+<header><nav>
+  <a href="https://tosomelogis.com">홈</a>
+  <a href="/">블로그</a>
+</nav></header>
+<main>{{ content | safe }}</main>
+<footer><p>© 투삼로지스</p></footer>
+</body></html>
